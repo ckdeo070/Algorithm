@@ -34,10 +34,12 @@ public class Solution {
         } else if (o1.totalPlay > o2.totalPlay) {
           return -1;
         } else {
-          if (o1.play <= o2.play) {
+          if (o1.play < o2.play) {
             return 1;
-          } else {
+          } else if (o1.play > o2.play) {
             return -1;
+          } else {
+            return 0;
           }
         }
       }
